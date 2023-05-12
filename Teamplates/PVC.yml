@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nfs-pvc-logs
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeName: #输入PV名称进行绑定
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: nfs

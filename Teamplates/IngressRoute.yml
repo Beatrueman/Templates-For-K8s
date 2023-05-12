@@ -1,0 +1,13 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: addr
+spec:
+  entryPoints:
+  - web
+  routes:
+  - match: Host(`Your_Domain_Name`)
+    kind: Rule
+    services:
+    - name: svc
+      port: 80
